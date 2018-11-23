@@ -1,0 +1,29 @@
+"Can you please explain how"-
+
+Of course, it really is simple., 
+
+  All we are doing here is using our default install at /opt/lampp as a master to contain different versioned binaries within /bin
+First we rename that master install
+
+Then we create a new install, some thing like 7.0.1 may have wildly different php binaries than 5, but after the rename, and new
+install, we want to note that version
+
+So /opt/lampp is your new install now
+Take a breather, note the version of it's new binaries (like php-7.0.1) within /bin, and run copier using that as the first param, 
+and a reference to our temp master
+
+In my example my master was originally a version 5.2.63 or similar, so I named it /opt/lampp5, ran sudo ./lampp_copier.sh 7.0.1 5
+and voila binaries are copied over
+
+But this isn't how they are referenced in /bin, thanksfully that is done by default, by symlink, so now rename everything back and
+use your master /opt/lampp install
+
+That one we want to now run that new version parameter against using switcher, such as this way, ran sudo ./lampp_switcher.sh 7.0.1
+And you know what, it's intuitive
+
+It will create sym links, if you use a bad version and they end up broken, fix your parameter and run again, it fixes each on exit 1
+Ultimately you're versioned and gtg!
+
+
+I much rather prefer this way especially in the spirit of the old xampp phpswitcher.bat for Windows and in the spirit of Github.,
+version and create your stack.
