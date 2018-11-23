@@ -1,6 +1,6 @@
 "Can you please explain how"-
 
-Of course, it really is simple., 
+Of course, it really is simple., I'll put an example after explaining, because these scripts can version any Lampp stack actually..
 
   All we are doing here is using our default install at /opt/lampp as a master to contain different versioned binaries within /bin
 First we rename that master install
@@ -27,3 +27,27 @@ Ultimately you're versioned and gtg!
 
 I much rather prefer this way especially in the spirit of the old xampp phpswitcher.bat for Windows and in the spirit of Github.,
 version and create your stack.
+
+
+
+
+lampp  lampp5  lampp_copier.sh  lampp_switcher.sh
+ow@ow-Satellite-C55-B:/opt$ sudo ./lampp_copier.sh 7.0.1 5
+attempting php binary copy to /opt/lampp5/bin
+attempting php cli copy to /opt/lampp5/bin
+attempting php config copy to /opt/lampp5/bin
+attempting phpize copy to /opt/lampp5/bin
+Files copied successfully, no i/o errors,  Done...
+ow@ow-Satellite-C55-B:/opt$ sudo mv lampp/ lampp7.0.1/
+ow@ow-Satellite-C55-B:/opt$ sudo mv lampp5/ lampp/
+ow@ow-Satellite-C55-B:/opt$ sudo ./lampp_switcher.sh 7.0.1
+php binary symlink exists, switching to 7.0.1
+php cli symlink exists, switching to 7.0.1
+php config symlink exists, switching to 7.0.1
+phpize symlink exists, switching to 7.0.1
+All symlinks updated to version 7.0.1, no i/o errors,  Done...
+ow@ow-Satellite-C55-B:/opt$ 
+
+
+Manage, maintain your running xampp, httpd before these actions, so no PIDs are left hanging, you just upgraded php, and can switch back and forth.
+
