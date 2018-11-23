@@ -31,4 +31,4 @@
         
     - for instance move master at /opt/lampp5 back to /opt/lampp, enjoy latest binaries set to those versioned
 
-3. Start xampp (using /opt/lampp/xampp start):
+5. Start xampp (using /opt/lampp/xampp start):
