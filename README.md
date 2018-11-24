@@ -28,6 +28,14 @@ The above example will copy php binary, php-cgi, php-config, phpize to dir /opt/
 
 The quite similar step copy php modules, is crudely handled at the end for update of conf (libphp#.so) with existing backed up to (libphp#.so_)
 
+The conf change you may make upgrading or downgrading versions is the 1 manual step for a
+module version
+This can't be helped, could be done by the script, but is a one digit change to httpd-xampp
+at /etc/extra
+
+Verify your       LoadModule php#_module modules/libphp#.so
+ version
+ 
 # Using lampp_switcher.sh
 sudo chmod +x, use as "./script param", by example, "sudo ./lampp_switcher.sh 7.0.1"
 
