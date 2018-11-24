@@ -40,7 +40,17 @@ attempting php binary copy to /opt/lampp5/bin
 attempting php cli copy to /opt/lampp5/bin
 attempting php config copy to /opt/lampp5/bin
 attempting phpize copy to /opt/lampp5/bin
+script found module, backing up existing 
+cp: cannot stat '/opt/lampp5/modules/libphp4.so': No such file or directory
+script copying module, versioning now 
+cp: cannot stat '/opt/lampp/modules/libphp4.so': No such file or directory
+cp: cannot stat '/opt/lampp/modules/libphp5.so': No such file or directory
+script finished module, backup, copy
+no changes to /opt/lampp/etc/extra/
+ httpd-xampp.conf (add LoadModule
+ php#_module modules/libphp#.so )
 Files copied successfully, no i/o errors,  Done...
+
 ow@ow-Satellite-C55-B:/opt$ sudo mv lampp/ lampp7.0.1/
 ow@ow-Satellite-C55-B:/opt$ sudo mv lampp5/ lampp/
 ow@ow-Satellite-C55-B:/opt$ sudo ./lampp_switcher.sh 7.0.1
