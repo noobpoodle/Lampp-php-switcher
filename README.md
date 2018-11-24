@@ -24,7 +24,9 @@ Once you have a successful install (new php binaries) configure scripts below
 # Using lampp_copier.sh
 sudo chmod +x, use as "./script param param", by example, "sudo ./lampp_copier.sh 7.0.1 5"
 
-The above example will copy php binary, php-cgi, php-config, phpize to /opt/lampp5/bin
+The above example will copy php binary, php-cgi, php-config, phpize to dir /opt/lampp5/bin
+
+The quite similar step copy php modules, is crudely handled at the end for update of conf (libphp#.so) with existing backed up to (libphp#.so_)
 
 # Using lampp_switcher.sh
 sudo chmod +x, use as "./script param", by example, "sudo ./lampp_switcher.sh 7.0.1"
