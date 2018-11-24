@@ -110,8 +110,24 @@ echo "created symlink anyway after existing at master /bin removed";
 	exit 1
 fi
 
+LIBPHP4SO="/opt/lampp/modules/libphp4.so"
+LIBPHP5SO="/opt/lampp/modules/libphp5.so"
+LIBPHP7SO="/opt/lampp/modules/libphp7.so"
+
+if [[ -f "$LIBPHP4SO" || -f "$LIBPHP5SO" || -f "$LIBPHP7SO" ]]
+	then
+echo "script found module, switching to "$LAMPP_VERSION
+echo "may require changes to /opt/lampp/etc/extra/ conf"
+echo "use the single digit php module at "$LAMPP_VERSION
+echo " httpd-xampp.conf (add LoadModule"
+echo " php#_module modules/libphp#.so ) "
+	else
+echo "script found missing or no module for php 4,5, or 7, error?"
+	exit 1
+fi
 
 echo "All symlinks updated to version $LAMPP_VERSION, no i/o errors,  Done..."
 exit 0
+
 
 
