@@ -35,6 +35,8 @@ at /etc/extra
 
 Verify your       LoadModule php#_module modules/libphp#.so
  version
+ ..of course it could be helped. Next few commits will see original conf backup and copy of new during copier versioning and file saves
+After this switcher will simply backup and rename based on existing and version num
  
 # Using lampp_switcher.sh
 sudo chmod +x, use as "./script param", by example, "sudo ./lampp_switcher.sh 7.0.1"
