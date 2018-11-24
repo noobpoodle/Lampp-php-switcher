@@ -18,6 +18,9 @@ and voila binaries are copied over
 But this isn't how they are referenced in /bin, thanksfully that is done by default, by symlink, so now rename everything back and
 use your master /opt/lampp install
 
+
+Note that copier .sh will backup existing libphp modules, and copy any latest versions which may or not be referenced properly inside /opt/lampp/etc/extra/ conf
+
 That one we want to now run that new version parameter against using switcher, such as this way, ran sudo ./lampp_switcher.sh 7.0.1
 And you know what, it's intuitive
 
@@ -51,3 +54,8 @@ ow@ow-Satellite-C55-B:/opt$
 
 Manage, maintain your running xampp, httpd before these actions, so no PIDs are left hanging, you just upgraded php, and can switch back and forth.
 
+Trust that any modules are copied (see latest script output) and verify your versioning, upgrade or downgrade by httpd-xampp stored in /etc/extra
+
+
+
+LoadModule php4_module modules/libphp4.so   or change to 5, 7   if needed manually before sudo ./opt/lampp/xampp start
