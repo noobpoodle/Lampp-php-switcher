@@ -1,6 +1,15 @@
 # Lampp-php-switcher
 Lampp php versioning by installing Multiple Versions to pull binaries into master /opt/lampp/bin
 
+# What we're doing 
+We will be manually shutting down lampp below, manually naming a master lampp dir, allowing the
+new directory to setup
+
+Then we use the lampp copier script, the lampp switcher script, and manually update configuration
+
+After this all PHP modules will be copied and named in master dir, including modules, and then we
+set back to default name
+
 
 # Begin by shutdown
 End and (ie sudo killall httpd) shut down running Apache, Proftpd, and Mysql and xampp executable.
