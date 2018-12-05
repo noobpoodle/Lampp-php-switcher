@@ -3,12 +3,18 @@ Lampp php versioning by installing Multiple Versions to pull binaries into maste
 
 # What we're doing 
 We will be manually shutting down lampp below, manually naming a master lampp dir, allowing the
+
 new directory to setup
 
 Then we use the lampp copier script, the lampp switcher script, and manually update configuration
 
 After this all PHP modules will be copied and named in master dir, including modules, and then we
+
 set back to default name
+
+You can achieve the same effect as these scripts by manually copy binaries and sym links, with the
+
+configuration change
 
 
 # Begin by shutdown
